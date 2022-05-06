@@ -185,6 +185,8 @@ R:
 <div class="dcol">
 <h2>Output</h2>
 <script src="three-onlymath.min.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
+
 <script>
 var quat = new THREE.Quaternion();
 var highlightedId = 'ip0';
@@ -438,4 +440,11 @@ For almost all conversions, <a href="https://threejs.org/docs/index.html#api/mat
 </form>
 </div>
 </div>
+<script>
+    $(document).ready(function(){
+        $("#iformatdeg").click();
+        $("#resformatdeg").click();
+});
+</script>
 </body></html>
+
