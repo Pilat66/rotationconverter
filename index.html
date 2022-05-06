@@ -118,8 +118,8 @@ input[type=number]{
 <div class="dcol">
 <h2>Input</h2>
 <p>Input angle format
-<label><input type="radio" id="iformatrad" name="iformat" value="0" onchange="update(inputMode)"/>Radians</label>
-<label><input type="radio" id="iformatdeg" name="iformat" value="1" checked onchange="update(inputMode)"/>Degrees</label>
+<label><input type="radio" id="iformatrad" name="iformat" value="0" checked onchange="update(inputMode)"/>Radians</label>
+<label><input type="radio" id="iformatdeg" name="iformat" value="1" onchange="update(inputMode)"/>Degrees</label>
 <p class="pi" id="ip0">Rotation matrix
 <br /><span class="dl"></span><input type="number" pattern="\d+(\.\d*)?" id="m00" value="1" oninput="update(0)"/>
 <span class="dl2"></span><input type="number" pattern="\d+(\.\d*)?" id="m01" value="0" oninput="update(0)"/>
@@ -392,8 +392,8 @@ function toFixedWidth(x){
 }
 </script>
 <p>Output angle format
-<label><input type="radio" id="resformatrad" name="resformat" value="0" onchange="doOutput()"/>Radians</label>
-<label><input type="radio" id="resformatdeg" name="resformat" value="1" checked onchange="doOutput()"/>Degrees</label>
+<label><input type="radio" id="resformatrad" name="resformat" value="0" checked onchange="doOutput()"/>Radians</label>
+<label><input type="radio" id="resformatdeg" name="resformat" value="1" onchange="doOutput()"/>Degrees</label>
 <p>Rotation matrix
 <br /><textarea id="resmatrix" rows="3" cols="70" readonly></textarea>
 <p>Quaternion [x, y, z, w]
@@ -414,7 +414,6 @@ function toFixedWidth(x){
 <br />
 <textarea id="rese" rows="1" cols="70" readonly></textarea>
 </div>
-
 <br style="clear: left;" />
 
 <div class="dcol">
