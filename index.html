@@ -243,6 +243,7 @@ function doOutput()
     var eu = new THREE.Euler();
     eu.setFromRotationMatrix(m, document.getElementById("reseuler").value);
     document.getElementById("rese").value = '[ x: '+toReal(toAngle(eu.toArray()[0]))+', y: '+toReal(toAngle(eu.toArray()[1]))+', z: '+toReal(toAngle(eu.toArray()[2]))+' ]';
+    document.getElementById("rese2").value = '[ "roll": '+toReal(toAngle(eu.toArray()[0]))+', "pitch": '+toReal(toAngle(eu.toArray()[1]))+', "yaw": '+toReal(toAngle(eu.toArray()[2]))+' ]';
 
     var spansi = document.getElementsByName('spananglei');
     for (var i = 0; i < spansi.length; i++)
@@ -415,6 +416,7 @@ function toFixedWidth(x){
 </select>
 <br />
 <textarea id="rese" rows="1" cols="70" readonly></textarea>
+<textarea id="rese2" rows="1" cols="70" readonly></textarea>
 </div>
 <br style="clear: left;" />
 
