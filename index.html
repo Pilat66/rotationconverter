@@ -276,7 +276,7 @@ function doOutput()
     // var eu = new THREE.Euler();
     // eu.setFromRotationMatrix(m, document.getElementById("reseuler").value);
     // document.getElementById("rese").value = '[ x: '+toReal(toAngle(eu.toArray()[0]))+', y: '+toReal(toAngle(eu.toArray()[1]))+', z: '+toReal(toAngle(eu.toArray()[2]))+' ]';
-    var eu_variance = ['XYZ','XZY','YXZ','YZX','ZXY','ZYX'];
+    var eu_variance = ['XYZ','ZYX','XZY','YZX','YXZ','ZXY'];
 
 
     eu_variance.forEach( function (item, i, eu_variance) {
@@ -292,6 +292,11 @@ function doOutput()
             simplification(toReal(toAngle(eu.toArray()[1])))+' '+ 
             simplification(toReal(toAngle(eu.toArray()[2])))+' ]');
     })
+        document.getElementById("rese2"+item).innerHTML = (item+'[ '+ 
+            simplification(toReal(toAngle(eu.toArray()[0])))+' ' + 
+            simplification(toReal(toAngle(eu.toArray()[1])))+' '+ 
+            simplification(toReal(toAngle(eu.toArray()[2])))+' ]');
+    rese2YXZ_DB
 
     var spansi = document.getElementsByName('spananglei');
     for (var i = 0; i < spansi.length; i++)
@@ -475,6 +480,7 @@ function toFixedWidth(x){
 </div>
 <br />
 <div>
+    <span id="rese2YXZ_DB"></span><br>
     <span id="rese2XYZ"></span><br>
     <span id="rese2XZY"></span><br>
     <strong><span id="rese2YXZ"></span></strong><br>
